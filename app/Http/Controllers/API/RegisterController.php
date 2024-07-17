@@ -54,7 +54,7 @@ class RegisterController extends BaseController
             $data['user'] =  $user;
             return $this->sendResponse($data, 'User login successfully.');
         } else {
-            return $this->sendError('Unauthorised.', ['error' => 'Unauthorised']);
+            return $this->sendError('Invalid email or password!', ['error' => 'Unauthorised'], 401);
         }
     }
 
