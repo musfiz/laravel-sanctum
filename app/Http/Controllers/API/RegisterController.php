@@ -52,7 +52,7 @@ class RegisterController extends BaseController
             $user = Auth::user();
             $data['token'] =  $user->createToken('MyApp')->plainTextToken;
             $data['user'] =  $user;
-            return $this->sendResponse($data, 'User login successfully.');
+            return $this->sendResponse($data, 'User login successfull.');
         } else {
             return $this->sendError('Invalid email or password!', ['error' => 'Unauthorised'], 401);
         }
