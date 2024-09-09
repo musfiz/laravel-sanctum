@@ -10,7 +10,6 @@ trait PeopleTrait
     {
         $page = $request->page ?? 1;
         $perPage = $request->per_page ?? 20;
-
         return People::orderBy('created_at', 'asc')->paginate($perPage, ['*'], 'people',  $page);
     }
 }
