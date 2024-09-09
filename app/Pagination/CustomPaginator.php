@@ -14,10 +14,11 @@ class CustomPaginator extends LengthAwarePaginator
   public function toArray()
   {
     return [
-      'data'      => $this->items->toArray(),
-      'page'      => $this->currentPage(),
-      'per_page'  => $this->perPage(),
-      'total'     => $this->total(),
+      'data'        => $this->items->toArray(),
+      'page'        => $this->currentPage(),
+      'per_page'    => $this->perPage(),
+      'total'       => $this->total(),
+      'total_pages' => $this->lastPage()
     ];
   }
 }
