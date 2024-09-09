@@ -1,0 +1,21 @@
+<?php
+
+namespace DummyNamespace;
+
+trait DummyClass
+{
+    public static function store($request): Void
+    {
+        //
+    }
+
+    public static function update($request): Void
+    {
+        //
+    }
+
+    public static function delete($id): Void
+    {
+        //
+    }
+}
