@@ -12,7 +12,7 @@ class PeopleController extends BaseController
 
     public function list(Request $request): JsonResponse
     {
-        $data = PeopleTrait::getAllPeople($request);
-        return $this->sendResponse($data);
+        $res = PeopleTrait::getAllPeople($request);
+        return $this->sendPaginationResponse($res);
     }
 }

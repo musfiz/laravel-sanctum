@@ -25,6 +25,17 @@ class BaseController extends Controller
         }
         return response()->json($response, 200);
     }
+
+    /**
+     * Pagination response method.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function sendPaginationResponse($result): JsonResponse
+    {
+        return response()->json($result, 200);
+    }
+
     /**
      * return error response.
      *
